@@ -1,0 +1,101 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sun Aug 18 02:47:17 2019
+| Host         : DESKTOP-7NQ195N running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file bootstrap_control_sets_placed.rpt
+| Design       : bootstrap
+| Device       : xc7z020
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    32 |
+| Unused register locations in slices containing registers |   102 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            2 |
+|      8 |            4 |
+|     10 |            7 |
+|     12 |            2 |
+|     14 |            1 |
+|    16+ |           16 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              24 |           10 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             114 |           16 |
+| Yes          | No                    | No                     |             428 |           75 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             276 |           34 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------+-----------------------------------------------+-------------------------------------------------+------------------+----------------+
+|    Clock Signal   |                 Enable Signal                 |                 Set/Reset Signal                | Slice Load Count | Bel Load Count |
++-------------------+-----------------------------------------------+-------------------------------------------------+------------------+----------------+
+|  sysclk_IBUF_BUFG | ctrl/Init/temp_vdd1_out                       |                                                 |                1 |              2 |
+|  sysclk_IBUF_BUFG | ctrl/Init/temp_vbat2_out                      |                                                 |                1 |              2 |
+|  sysclk_IBUF_BUFG | ctrl/Example/temp_spi_data                    |                                                 |                1 |              8 |
+|  sysclk_IBUF_BUFG | ctrl/Example/temp_spi_data                    | ctrl/Example/temp_spi_data[7]_i_1_n_0           |                1 |              8 |
+|  sysclk_IBUF_BUFG | ctrl/Example/E[0]                             | rst_IBUF                                        |                1 |              8 |
+|  sysclk_IBUF_BUFG | ctrl/Example/after_state                      | ctrl/Example/after_state[66]_i_1__0_n_0         |                1 |              8 |
+|  sysclk_IBUF_BUFG |                                               | ctrl/Init/SPI_COMP/counter                      |                1 |             10 |
+|  sysclk_IBUF_BUFG |                                               | ctrl/Example/SPI_COMP/counter                   |                2 |             10 |
+|  sysclk_IBUF_BUFG | ctrl/Init/SPI_COMP/temp_sdo                   | ctrl/Init/SPI_COMP/shift_counter[3]_i_1_n_0     |                2 |             10 |
+|  sysclk_IBUF_BUFG | ctrl/Example/DELAY_COMP/current_state_reg[53] | ctrl/Example/DELAY_COMP/current_state_reg[3]    |                2 |             10 |
+|  sysclk_IBUF_BUFG | ctrl/Example/DELAY_COMP/current_state_reg[53] | ctrl/Example/DELAY_COMP/current_state_reg[53]_0 |                2 |             10 |
+|  sysclk_IBUF_BUFG | ctrl/Example/SPI_COMP/temp_sdo                | ctrl/Example/SPI_COMP/SR[0]                     |                1 |             10 |
+|  sysclk_IBUF_BUFG | ctrl/Example/after_page_state                 | ctrl/Example/temp_page[0]_i_1_n_0               |                1 |             10 |
+|  sysclk_IBUF_BUFG | ctrl/Example/DELAY_COMP/current_state_reg[53] | ctrl/Example/DELAY_COMP/current_state_reg[66]   |                2 |             12 |
+|  sysclk_IBUF_BUFG | ctrl/Example/current_screen[3][0][6]_i_1_n_0  |                                                 |                1 |             12 |
+|  sysclk_IBUF_BUFG | ctrl/Init/after_state[94]_i_1_n_0             | ctrl/Init/after_state[40]_i_1_n_0               |                2 |             14 |
+|  sysclk_IBUF_BUFG | ctrl/Init/temp_spi_data[7]_i_1__0_n_0         |                                                 |                4 |             16 |
+|  sysclk_IBUF_BUFG | ctrl/Init/SPI_COMP/shift_register_0           |                                                 |                2 |             16 |
+|  sysclk_IBUF_BUFG | ctrl/Example/SPI_COMP/shift_register          |                                                 |                2 |             16 |
+|  sysclk_IBUF_BUFG | ctrl/Example/temp_addr                        |                                                 |                4 |             20 |
+|  sysclk_IBUF_BUFG |                                               |                                                 |               10 |             24 |
+|  sysclk_IBUF_BUFG | ctrl/Init/DELAY_COMP/ms_counter               | ctrl/Init/DELAY_COMP/clk_counter_0              |                3 |             24 |
+|  sysclk_IBUF_BUFG | ctrl/Example/DELAY_COMP/ms_counter            | ctrl/Example/DELAY_COMP/clk_counter             |                3 |             24 |
+|  sysclk_IBUF_BUFG |                                               | rst_IBUF                                        |                5 |             26 |
+|  sysclk_IBUF_BUFG | ctrl/Example/after_page_state                 |                                                 |                3 |             26 |
+|  sysclk_IBUF_BUFG | ctrl/Example/temp_char                        |                                                 |               10 |             26 |
+|  sysclk_IBUF_BUFG |                                               | ctrl/Init/DELAY_COMP/clk_counter_0              |                4 |             34 |
+|  sysclk_IBUF_BUFG |                                               | ctrl/Example/DELAY_COMP/clk_counter             |                4 |             34 |
+|  sysclk_IBUF_BUFG | ctrl/Example/after_state                      |                                                 |               12 |             88 |
+|  sysclk_IBUF_BUFG | ctrl/Init/after_state[94]_i_1_n_0             |                                                 |               18 |             94 |
+|  sysclk_IBUF_BUFG | ctrl/Example/DELAY_COMP/current_state_reg[53] |                                                 |               16 |            102 |
+|  sysclk_IBUF_BUFG | ctrl/Init/SPI_COMP/E[0]                       | rst_IBUF                                        |               13 |            128 |
++-------------------+-----------------------------------------------+-------------------------------------------------+------------------+----------------+
+
+

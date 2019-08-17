@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1566063806">
+  <File Type="PA-TCL" Name="bootstrap.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="bootstrap_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="bootstrap_reports.tcl"/>
+  <File Type="RDS-RDS" Name="bootstrap.vds"/>
+  <File Type="RDS-UTIL" Name="bootstrap_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="bootstrap_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="bootstrap.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="bootstrap_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="bootstrap_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/PmodOLED_Source/Delay.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Desktop/pmodoledctrl_verilog/PmodOLED_Source/Delay.v"/>
+        <Attr Name="ImportTime" Val="1340686198"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/PmodOLED_Source/OledInit.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Desktop/pmodoledctrl_verilog/PmodOLED_Source/OledInit.v"/>
+        <Attr Name="ImportTime" Val="1340686172"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/PmodOLED_Source/PmodOLEDCtrl.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Desktop/pmodoledctrl_verilog/PmodOLED_Source/PmodOLEDCtrl.v"/>
+        <Attr Name="ImportTime" Val="1340686176"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/PmodOLED_Source/SpiCtrl.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Desktop/pmodoledctrl_verilog/PmodOLED_Source/SpiCtrl.v"/>
+        <Attr Name="ImportTime" Val="1340686220"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/PmodOLED_Source/OledEX.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clkgen.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/bootstrap.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/PmodOLED_Source/charLib.mif">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Desktop/pmodoledctrl_verilog/PmodOLED_Source/charLib.mif"/>
+        <Attr Name="ImportTime" Val="1319028874"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../jsackos/Desktop/Pmod_Demos/In_Progress/PmodOLED/HDL/Verilog_PmodOLED_Demo_Source/PmodOLED/charLib.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="bootstrap"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/digilent-xdc-master/Zybo-Z7-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../pmodoled/pmodoled.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Z7-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1564407667"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="charLib"/>
+</GenRun>
